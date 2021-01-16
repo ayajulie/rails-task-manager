@@ -9,10 +9,11 @@
 ul li{
   list-style-type: none;
 }
+.link { 
+  text-decoration: none;
+}
+#task_details { 
+  color: #b7b932;
+}
 
-a { 
-  text-decoration: none;
-}
-.container a {
-  text-decoration: none;
-}
+

@@ -2,12 +2,13 @@
 <% @tasks.each do |task| %>
   <ul>
     <li>
+      <% task.completed?  %>
       <%= check_box_tag "task_#{task.id}", task.completed , task.completed? %>
-      <%= link_to task.title, task %>
+      <%= link_to task.title, task , class:"link" %>
       <%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, task_path(task),
 method: :delete,
 data: { confirm: "Delete #{task.title}" } %>
     </li>
   </ul>
 <% end %>
-<%= link_to '<i class="fa fa-plus" aria-hidden="true"></i> Add a new task'.html_safe, new_task_path %>
+<%= link_to '<i class="fa fa-plus" aria-hidden="true"></i> Add a new task'.html_safe, new_task_path,  class:"link" %>
